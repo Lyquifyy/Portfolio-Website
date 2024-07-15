@@ -27,7 +27,7 @@ body {
     height: 140px;
     margin-top: 4vh;
     background: var(--text-colormixed);
-    border-radius: 100px;
+    border-radius: 50px;
     overflow-x: auto;
     overflow-y: auto;
     transition: all ease 0.3s;
@@ -88,9 +88,27 @@ header {
     transition: all ease 0.3s;
 }
 
+/*This is for the Insperational Message*/
+
+.insperational_section {
+    height: 1080px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+}
+
+#insperational_message {
+    width: 100%;
+    font-size: 30px;
+    color: var(--text-colorwhite);
+}
+
 /*Phone sizing Adjustments*/
 
 @media only screen and (max-width: 600px) {
+
+    /*Header*/
 
     .header_logo {
         width: 70px;
@@ -125,4 +143,31 @@ header {
         height: 15px;
     }
 
+    /*Insperation Section*/
+
+    .insperational_section {
+        height: 540px;
+    }
+    
+    #insperational_message {
+        font-size: 15px;
+    }
+
+}
+
+/*Transition for hidden text*/
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+    width: 100%
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+    width: 100%
 }
