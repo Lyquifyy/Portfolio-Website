@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+/*These are some basic variables for color scheme*/
+
+:root {
+    --text-colormain: #3474eb;
+    --text-colormixed: #191b24;
+    --text-colordark: #121212;
+    --text-colorblack: #000;
+    --text-colorwhite: #fff;
+}
+
+body {
+    background: var(--text-colordark);
+}
+
+
+/*This is the Header*/
+
+.header_logo {
+    width: 140px;
+    height: 140px;
+    margin-top: 4vh;
+    background: var(--text-colormixed);
+    border-radius: 100px;
+    overflow-x: auto;
+    overflow-y: auto;
+    transition: all ease 0.3s;
+}
+
+.bottom_logo {
+    width: 85px;
+    height: 85px;
+}
+li, a, button{
+    color: var(--text-colormain);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(1px);
+    align-items: center;
+    padding: 0 3%;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+    background: var(--text-colormixed);
+    position: fixed;
+    top: 0;
+    transition: all ease 0.5s;
+}
+
+
+.nav_items{
+    list-style: none;
+}
+
+.nav_items li{
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.nav_items li a:hover{
+    color: var(--text-colorwhite);
+}
+
+.socials li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.socials li img{
+    width: 25px;
+    height: 25px;
+    filter: invert(40%) sepia(63%) saturate(1016%) hue-rotate(189deg) brightness(93%) contrast(98%);    transition: all ease 0.3s;
+}
+
+.socials li img:hover{
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(331deg) brightness(103%) contrast(100%);
+    transition: all ease 0.3s;
+}
