@@ -87,3 +87,42 @@ header {
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(331deg) brightness(103%) contrast(100%);
     transition: all ease 0.3s;
 }
+
+/*Phone sizing Adjustments*/
+
+@media only screen and (max-width: 600px) {
+
+    .header_logo {
+        width: 70px;
+        height: 70px;
+        margin-top: 4vh;
+        border-radius: 50px;
+    }
+    
+    .bottom_logo {
+        width: 45px;
+        height: 45px;
+    }
+    li, a, button{
+        font-size: 10px;
+    }
+
+    header {
+        padding: 0 1%;
+        height: 60px;
+    }
+    
+    .nav_items li{
+        padding: 0px 15px;
+    }
+    
+    .socials li{
+        padding: 0px 10px;
+    }
+    
+    .socials li img{
+        width: 15px;
+        height: 15px;
+    }
+
+}
