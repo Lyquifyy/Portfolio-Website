@@ -1,0 +1,255 @@
+/* General Styles */
+body {
+    background: linear-gradient(300deg, #000000, #121212, #191b24);
+    color: var(--text-colorwhite);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*These are some basic variables for color scheme*/
+
+:root {
+    --text-colormain: #3474eb;
+    --text-colormixed: #191b24;
+    --text-colordark: #121212;
+    --text-colorblack: #000;
+    --text-colorwhite: #fff;
+}
+
+.bottom_logo {
+    width: 85px;
+    height: 85px;
+}
+li, a, button {
+    color: var(--text-colormain);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(1px);
+    align-items: center;
+    padding: 0 3%;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    transition: all ease 0.5s;
+}
+
+.nav_items {
+    list-style: none;
+}
+
+.nav_items li {
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.nav_items li a:hover {
+    color: var(--text-colorwhite);
+    cursor: pointer;
+}
+
+.socials li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.socials li img {
+    width: 25px;
+    height: 25px;
+    filter: invert(40%) sepia(63%) saturate(1016%) hue-rotate(189deg) brightness(93%) contrast(98%);
+    transition: all ease 0.3s;
+}
+
+.socials li img:hover {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(331deg) brightness(103%) contrast(100%);
+    transition: all ease 0.3s;
+}
+
+/* Contact Form Styles */
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10%;
+    background-color: none;
+    border-radius: 10px;
+    height: 100vh;
+    margin: 20px 0;
+}
+
+.contact-title {
+    font-size: 36px;
+    color: var(--text-colormain);
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    margin-top: 15vh;
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--text-colordark);
+    border-radius: 5px;
+    background-color: var(--text-colorwhite);
+    font-size: 16px;
+    color: var(--text-colormixed);
+    transition: border 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border: 1px solid var(--text-colormain);
+    outline: none;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: var(--text-colormain);
+    color: var(--text-colorwhite);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: darken(var(--text-colormain), 10%);
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    background-color: var(--text-colordark);
+}
+
+/* General styles for larger screens */
+
+.menu-icon {
+    display: none;
+}
+
+/* Side menu styles (visible only on mobile) */
+
+.side-menu {
+    display: none;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+    header {
+        display: none
+    }
+    
+    .contact-title {
+        font-size: 24px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        font-size: 12px;
+    }
+
+    /*Phone Header*/
+
+    header {
+        display: none
+    }
+
+    li, a, button {
+        font-size: 18px;
+    }
+
+    .side-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        width: 250px;
+        height: 100%;
+        background-color: #191b24;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+        z-index: 100;
+    }
+    
+    .side-menu.open {
+        transform: translateX(0);
+    }
+
+    .side-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 50px;
+    }
+    
+    .side-menu li {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .side-menu li a {
+        font-size: 24px;
+        color: var(--text-colormain);
+        display: block;
+        transition: color 0.3s ease;
+    }
+    
+    .side-menu li a:hover {
+        color: var(--text-colorwhite);
+        cursor: pointer;
+    }
+    
+    .side-menu li img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        vertical-align: middle;
+        filter: invert(40%) sepia(63%) saturate(1016%) hue-rotate(189deg) brightness(93%) contrast(98%);
+        transition: all ease 0.3s;
+    }
+    
+    .side-menu li img:hover {
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(331deg) brightness(103%) contrast(100%);
+        transition: all ease 0.3s;
+    }
+    
+    /* Menu Icon for Mobile */
+
+    .menu-icon {
+        display: block;
+        padding: 5px;
+        font-size: 28px;
+        color: var(--text-colormain);
+        cursor: pointer;
+    }
+    
+    .menu-icon:hover {
+        color: var(--text-colorwhite);
+    }
+
+}
