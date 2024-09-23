@@ -204,14 +204,14 @@ header {
  
 }
 
-.name_progress::after{
+.name_progress::after {
     content: '';
     position: absolute;
-    width: 420px;
-    height: .35vh;
-    top: 56%;
+    width: 420px; /* Adjust width based on screen size in media query */
+    height: 0.35vh;
+    top: 56%; /* Adjust top position */
     left: 50%;
-    translate: -50% -50%;
+    transform: translateX(-50%); /* Centers the line horizontally */
     background: var(--text-colormain);
     border-radius: 1px;
     animation-name: name_Underline; 
@@ -575,13 +575,10 @@ header {
     #description_main, #description_follow_1, #description_follow_2 {
         font-size: 14px; 
         width: 100%; 
-        left: 24%;
     }
 
-    .name_progress::after{
-        width: 250px;
-        height: .25vh;
-        top: 35% !important;
+    .name_progress::after {
+        display: none;
     }
 
     /* About Me Section */

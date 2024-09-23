@@ -158,6 +158,15 @@ footer {
     header {
         display: none
     }
+
+    .contact-section {
+        justify-content: center; /* Vertically centers */
+        align-items: center; /* Horizontally centers */
+        padding: 20px 5%; /* Adjust padding for smaller screens */
+        height: auto; /* Allow it to grow based on content */
+        min-height: 100vh; /* Ensure it takes at least full viewport height */
+        margin-right: 8%; /* Reset margin for phones */
+    }
     
     .contact-title {
         font-size: 24px;
