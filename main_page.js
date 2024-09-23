@@ -40,6 +40,37 @@ const name_obs = new IntersectionObserver((entries) => {
     });
 });
 
+function openPopup(popupId) {
+    document.getElementById(popupId).style.display = 'flex';
+}
+
+function closePopup(popupId) {
+    document.getElementById(popupId).style.display = 'none';
+}
+
+// Close the pop-up when clicking outside the content
+window.onclick = function(event) {
+    const popups = document.querySelectorAll('.popup');
+    popups.forEach(popup => {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+}
+
+document.getElementById("about-btn").addEventListener("click", function(event) {
+    
+    // Get the position of the "About Me" section
+    const aboutSection = document.getElementById("about-me");
+    const aboutPosition = aboutSection.offsetTop;
+    
+    // Use window.scrollTo() for smooth scrolling
+    window.scrollTo({
+        top: aboutPosition,
+        behavior: "smooth"
+    });
+});
+
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 const hiddenNameDesc = document.querySelectorAll('.desc_hidden');
