@@ -19,6 +19,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background: linear-gradient(300deg, #000000, #121212, #191b24);
     background-size: 180% 180%;
@@ -461,6 +465,52 @@ header {
     color: #f1f1f1;
 }
 
+/* Future Ideas Section */
+
+.ideas-section {
+    padding: 60px 20px;
+    background: linear-gradient(180deg, rgba(25, 27, 36, 1), #f9f9f9);
+    transition: all 0.5s ease-in-out;
+}
+
+.ideas-header {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.ideas-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.idea-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.idea-card:hover {
+    transform: translateY(-5px);
+}
+
+.idea-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.idea-description {
+    font-size: 1.2rem;
+    color: #555;
+}
+
 /* Ensure popup lists and text are properly spaced */
 
 .popup-content ul {
@@ -666,6 +716,27 @@ header {
     .popup-content p, 
     .popup-content ul li {
         font-size: 14px;
+    }
+
+    /*Ideas Section*/
+
+    .ideas-section {
+        padding: 30px 10px;
+        height: auto; /* Ensures section height adjusts to content */
+    }
+
+    .ideas-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .ideas-section p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .experience-section button {
+        font-size: 0.85rem;
+        padding: 8px 18px;
     }
 
     /*Phone Header*/
